@@ -1,0 +1,985 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository version='1.2.0'?>
+<repository name='Andrey_Loskutov_plugins' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1663094884163'/>
+    <property name='p2.compressed' value='false'/>
+  </properties>
+  <references size='4'>
+    <repository uri='https://raw.githubusercontent.com/iloveeclipse/plugins/latest/' url='https://raw.githubusercontent.com/iloveeclipse/plugins/latest/' type='1' options='0'/>
+    <repository uri='https://raw.githubusercontent.com/iloveeclipse/plugins/latest/' url='https://raw.githubusercontent.com/iloveeclipse/plugins/latest/' type='0' options='0'/>
+    <repository uri='http://andrei.gmxhome.de/eclipse/' url='http://andrei.gmxhome.de/eclipse/' type='1' options='0'/>
+    <repository uri='http://andrei.gmxhome.de/eclipse/' url='http://andrei.gmxhome.de/eclipse/' type='0' options='0'/>
+  </references>
+  <units size='24'>
+    <unit id='com.cr.lockness.Lockness.feature.feature.group' version='3.1.1' singleton='false'>
+      <update id='com.cr.lockness.Lockness.feature.feature.group' range='[0.0.0,3.1.1)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='Lockness'/>
+        <property name='org.eclipse.equinox.p2.description' value='Lockness Eclipse Plugin - Java Thread Dump Analyser'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://lockness.plugin.free.fr/download.php'/>
+        <property name='org.eclipse.equinox.p2.provider' value='CR'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.cr.lockness.Lockness.feature.feature.group' version='3.1.1'/>
+      </provides>
+      <requires size='12'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.runtime' range='3.6.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.core' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jface.text' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.cr.lockness.Lockness' range='[3.1.1,3.1.1]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.cr.lockness.Lockness.feature.feature.jar' range='[3.1.1,3.1.1]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+          lockness.plugin@free.fr
+        </license>
+      </licenses>
+      <copyright>
+        CR, lockness.plugin@free.fr
+      </copyright>
+    </unit>
+    <unit id='org.eclipselabs.plugindependencies.core' version='1.3.3' generation='2'>
+      <update id='org.eclipselabs.plugindependencies.core' range='[0.0.0,1.3.3)' severity='0'/>
+      <properties size='4'>
+        <property name='df_LT.Bundle-Name' value='Plug-in Dependencies Core'/>
+        <property name='df_LT.Vendor' value='Andrey Loskutov'/>
+        <property name='org.eclipse.equinox.p2.name' value='%Bundle-Name'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%Vendor'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.core' version='1.3.3'/>
+        <provided namespace='osgi.bundle' name='org.eclipselabs.plugindependencies.core' version='1.3.3'/>
+        <provided namespace='java.package' name='org.eclipselabs.plugindependencies.core' version='0.0.0'/>
+        <provided namespace='osgi.identity' name='org.eclipselabs.plugindependencies.core' version='1.3.3'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            org.eclipselabs.plugindependencies.core
+          </description>
+        </requiredProperties>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipselabs.plugindependencies.core' version='1.3.3'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipselabs.plugindependencies.core;singleton:=true&#xA;Bundle-Version: 1.3.3
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipselabs.plugindependencies.feature.group' version='1.3.2.202206291936' singleton='false'>
+      <update id='org.eclipselabs.plugindependencies.feature.group' range='[0.0.0,1.3.2.202206291936)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='Plugin Dependencies Explorer'/>
+        <property name='org.eclipse.equinox.p2.description' value='Project provides both command line and Eclipse UI for static package, plugin and feature dependencies analysis (the dependencies are read from MANIFEST.MF and feature.xml files).'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/plugindependencies/wiki'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.feature.group' version='1.3.2.202206291936'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.ide' range='3.9.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.pde.feature.group' range='3.9.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.core' range='[1.3.3,1.3.3]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.ui' range='[1.3.1.202206291936,1.3.1.202206291936]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.feature.jar' range='[1.3.2.202206291936,1.3.2.202206291936]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2022 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
+        </license>
+      </licenses>
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2022 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='DataHierarchy.feature.jar' version='1.0.3.202006062100'>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='DataHierarchy'/>
+        <property name='org.eclipse.equinox.p2.description' value='If you know the Call Hierarchy plugin, you will find the Data Hierarchy very similar. It searches selected Java classes for declared fields, and starting with the found &quot;Data&quot; it recursively looks for fields which are declared on found classes (&quot;Hierarchy&quot;). At the end you can see kind of &quot;Data Hierarchy&quot; tree.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/datahierarchy/wiki'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.update.feature.plugin' value='de.loskutov.DataHierarchy'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='DataHierarchy.feature.jar' version='1.0.3.202006062100'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='DataHierarchy' version='1.0.3.202006062100'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='DataHierarchy' version='1.0.3.202006062100'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
+        </license>
+      </licenses>
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='AnyEditTools.feature.jar' version='2.7.2.202006062100'>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='AnyEditTools'/>
+        <property name='org.eclipse.equinox.p2.description' value='Adds useful context menu actions to text files and editors - Open file, type under&#xA;      cursor, Convert tabs to spaces, case, html, base64, unicode, Compare/Replace with&#xA;      clipboard or external files etc. AnyEdit can remove trailing whitespace and/or&#xA;      convert tabs-spaces on save and contributes Import/Export working sets wizards.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://andrei.gmxhome.de/anyedit/index.html'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.update.feature.plugin' value='de.loskutov.anyedit.AnyEditTools'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='AnyEditTools.feature.jar' version='2.7.2.202006062100'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='AnyEditTools' version='2.7.2.202006062100'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='AnyEditTools' version='2.7.2.202006062100'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
+        </license>
+      </licenses>
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='de.loskutov.eclipse.jdepend' version='1.2.4.202006062100' generation='2'>
+      <update id='de.loskutov.eclipse.jdepend' range='[0.0.0,1.2.4.202006062100)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='JDepend4Eclipse'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+      </properties>
+      <provides size='7'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='de.loskutov.eclipse.jdepend' version='1.2.4.202006062100'/>
+        <provided namespace='osgi.bundle' name='de.loskutov.eclipse.jdepend' version='1.2.4.202006062100'/>
+        <provided namespace='java.package' name='jdepend.framework' version='0.0.0'/>
+        <provided namespace='java.package' name='jdepend.textui' version='0.0.0'/>
+        <provided namespace='java.package' name='jdepend.xmlui' version='0.0.0'/>
+        <provided namespace='osgi.identity' name='de.loskutov.eclipse.jdepend' version='1.2.4.202006062100'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='12'>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.6.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.swt' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.help' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            de.loskutov.eclipse.jdepend
+          </description>
+        </requiredProperties>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='de.loskutov.eclipse.jdepend' version='1.2.4.202006062100'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: de.loskutov.eclipse.jdepend; singleton:=true&#xA;Bundle-Version: 1.2.4.202006062100
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='AnyEditTools.feature.group' version='2.7.2.202006062100' singleton='false'>
+      <update id='AnyEditTools.feature.group' range='[0.0.0,2.7.2.202006062100)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='AnyEditTools'/>
+        <property name='org.eclipse.equinox.p2.description' value='Adds useful context menu actions to text files and editors - Open file, type under&#xA;      cursor, Convert tabs to spaces, case, html, base64, unicode, Compare/Replace with&#xA;      clipboard or external files etc. AnyEdit can remove trailing whitespace and/or&#xA;      convert tabs-spaces on save and contributes Import/Export working sets wizards.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://andrei.gmxhome.de/anyedit/index.html'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='AnyEditTools.feature.group' version='2.7.2.202006062100'/>
+      </provides>
+      <requires size='16'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.runtime' range='3.8.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.filesystem' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.console' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.forms' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.debug.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jface.text' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.compare' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.net' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.expressions' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.workbench' range='3.8.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='de.loskutov.anyedit.AnyEditTools' range='[2.7.2.202006062100,2.7.2.202006062100]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='AnyEditTools.feature.jar' range='[2.7.2.202006062100,2.7.2.202006062100]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
+        </license>
+      </licenses>
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='FileSync.feature.group' version='1.3.10.202006062100' singleton='false'>
+      <update id='FileSync.feature.group' range='[0.0.0,1.3.10.202006062100)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='FileSync'/>
+        <property name='org.eclipse.equinox.p2.description' value='FileSync plugin for Eclipse is a file synchronisation tool. The&#xA;main goal is to keep files outside of Eclipse projects in-sync&#xA;with Eclipse project files.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/filesync4eclipse/wiki'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='FileSync.feature.group' version='1.3.10.202006062100'/>
+      </provides>
+      <requires size='8'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.runtime' range='3.6.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.net' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.variables' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='de.loskutov.FileSync' range='[1.3.10.202006062100,1.3.10.202006062100]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='FileSync.feature.jar' range='[1.3.10.202006062100,1.3.10.202006062100]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
+        </license>
+      </licenses>
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='de.loskutov.DataHierarchy' version='1.0.3.202006062100' generation='2'>
+      <update id='de.loskutov.DataHierarchy' range='[0.0.0,1.0.3.202006062100)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Data Hierarchy'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='de.loskutov.DataHierarchy' version='1.0.3.202006062100'/>
+        <provided namespace='osgi.bundle' name='de.loskutov.DataHierarchy' version='1.0.3.202006062100'/>
+        <provided namespace='osgi.identity' name='de.loskutov.DataHierarchy' version='1.0.3.202006062100'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='11'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.6.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.search' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.navigator' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.net' range='0.0.0'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            de.loskutov.DataHierarchy
+          </description>
+        </requiredProperties>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='de.loskutov.DataHierarchy' version='1.0.3.202006062100'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: de.loskutov.DataHierarchy;singleton:=true&#xA;Bundle-Version: 1.0.3.202006062100
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='DataHierarchy.feature.group' version='1.0.3.202006062100' singleton='false'>
+      <update id='DataHierarchy.feature.group' range='[0.0.0,1.0.3.202006062100)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='DataHierarchy'/>
+        <property name='org.eclipse.equinox.p2.description' value='If you know the Call Hierarchy plugin, you will find the Data Hierarchy very similar. It searches selected Java classes for declared fields, and starting with the found &quot;Data&quot; it recursively looks for fields which are declared on found classes (&quot;Hierarchy&quot;). At the end you can see kind of &quot;Data Hierarchy&quot; tree.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/datahierarchy/wiki'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='DataHierarchy.feature.group' version='1.0.3.202006062100'/>
+      </provides>
+      <requires size='12'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.runtime' range='3.6.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.core' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.search' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.navigator' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.net' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='de.loskutov.DataHierarchy' range='[1.0.3.202006062100,1.0.3.202006062100]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='DataHierarchy.feature.jar' range='[1.0.3.202006062100,1.0.3.202006062100]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
+        </license>
+      </licenses>
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='file:/data/git/plugins/site.xml.Andrey_Loskutov_plugins' version='1.0.0.7D7S7gdIbh--7kMkQNTRZioSY'>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Eclipse plugins provided by Andrey Loskutov'/>
+        <property name='org.eclipse.equinox.p2.description' value='Eclipse plugins provided by Andrey Loskutov. More info at https://github.com/iloveeclipse/plugins/wiki'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/data/git/plugins/site.xml.Andrey_Loskutov_plugins' version='1.0.0.7D7S7gdIbh--7kMkQNTRZioSY'/>
+      </provides>
+      <requires size='6'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.feature.group' range='[1.3.2.202206291936,1.3.2.202206291936]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='AnyEditTools.feature.group' range='[2.7.2.202006062100,2.7.2.202006062100]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.bcoview.feature.feature.group' range='[1.0.1.202006062100,1.0.1.202006062100]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='FileSync.feature.group' range='[1.3.10.202006062100,1.3.10.202006062100]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='JDepend4Eclipse.feature.group' range='[1.2.4.202006062100,1.2.4.202006062100]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='DataHierarchy.feature.group' range='[1.0.3.202006062100,1.0.3.202006062100]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='de.loskutov.FileSync' version='1.3.10.202006062100' generation='2'>
+      <update id='de.loskutov.FileSync' range='[0.0.0,1.3.10.202006062100)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='FileSync Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+      </properties>
+      <provides size='11'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='de.loskutov.FileSync' version='1.3.10.202006062100'/>
+        <provided namespace='osgi.bundle' name='de.loskutov.FileSync' version='1.3.10.202006062100'/>
+        <provided namespace='java.package' name='de.loskutov.fs' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.fs.actions' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.fs.builder' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.fs.command' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.fs.dialogs' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.fs.preferences' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.fs.properties' version='0.0.0'/>
+        <provided namespace='osgi.identity' name='de.loskutov.FileSync' version='1.3.10.202006062100'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='7'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.6.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.net' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.variables' range='0.0.0'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            de.loskutov.FileSync
+          </description>
+        </requiredProperties>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='de.loskutov.FileSync' version='1.3.10.202006062100'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: de.loskutov.FileSync;singleton:=true&#xA;Bundle-Version: 1.3.10.202006062100
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='file:/data/git/plugins/site.xml.Default' version='1.0.0.611cIzdM6'>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Uncategorized'/>
+        <property name='org.eclipse.equinox.p2.description' value='Default category for otherwise uncategorized features'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/data/git/plugins/site.xml.Default' version='1.0.0.611cIzdM6'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.cr.lockness.Lockness.feature.feature.group' range='[3.1.1,3.1.1]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='JDepend4Eclipse.feature.jar' version='1.2.4.202006062100'>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='JDepend4Eclipse'/>
+        <property name='org.eclipse.equinox.p2.description' value='JDepend4Eclipse plugin for Eclipse is a wrapper for running JDepend&#xA;from within Eclipse.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/jdepend4eclipse/wiki'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.update.feature.plugin' value='de.loskutov.eclipse.jdepend'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='JDepend4Eclipse.feature.jar' version='1.2.4.202006062100'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='JDepend4Eclipse' version='1.2.4.202006062100'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='JDepend4Eclipse' version='1.2.4.202006062100'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
+        </license>
+      </licenses>
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='org.eclipse.jdt.bcoview.feature.feature.jar' version='1.0.1.202006062100'>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='Bytecode Outline'/>
+        <property name='org.eclipse.equinox.p2.description' value='Bytecode outline and bytecode comparison view for java/class files.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/bytecodeoutline/wiki'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.update.feature.plugin' value='org.eclipse.jdt.bcoview'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.bcoview.feature.feature.jar' version='1.0.1.202006062100'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.eclipse.jdt.bcoview.feature' version='1.0.1.202006062100'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.eclipse.jdt.bcoview.feature' version='1.0.1.202006062100'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
+        </license>
+      </licenses>
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='org.eclipselabs.plugindependencies.feature.jar' version='1.3.2.202206291936'>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='Plugin Dependencies Explorer'/>
+        <property name='org.eclipse.equinox.p2.description' value='Project provides both command line and Eclipse UI for static package, plugin and feature dependencies analysis (the dependencies are read from MANIFEST.MF and feature.xml files).'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/plugindependencies/wiki'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.update.feature.plugin' value='org.eclipselabs.plugindependencies.ui'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.feature.jar' version='1.3.2.202206291936'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.eclipselabs.plugindependencies' version='1.3.2.202206291936'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.eclipselabs.plugindependencies' version='1.3.2.202206291936'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2022 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
+        </license>
+      </licenses>
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2022 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='com.cr.lockness.Lockness' version='3.1.1' generation='2'>
+      <update id='com.cr.lockness.Lockness' range='[0.0.0,3.1.1)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Lockness - Thread Dump Analyzer'/>
+        <property name='org.eclipse.equinox.p2.provider' value='CR'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.cr.lockness.Lockness' version='3.1.1'/>
+        <provided namespace='osgi.bundle' name='com.cr.lockness.Lockness' version='3.1.1'/>
+        <provided namespace='osgi.identity' name='com.cr.lockness.Lockness' version='3.1.1'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='11'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            com.cr.lockness.Lockness
+          </description>
+        </requiredProperties>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.cr.lockness.Lockness' version='3.1.1'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: com.cr.lockness.Lockness;singleton:=true&#xA;Bundle-Version: 3.1.1
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.jdt.bcoview' version='1.0.1.202006062100' generation='2'>
+      <update id='org.eclipse.jdt.bcoview' range='[0.0.0,1.0.1.202006062100)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Bytecode Outline'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.bcoview' version='1.0.1.202006062100'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.jdt.bcoview' version='1.0.1.202006062100'/>
+        <provided namespace='java.package' name='org.eclipse.jdt.bcoview.ui' version='0.0.0'/>
+        <provided namespace='osgi.identity' name='org.eclipse.jdt.bcoview' version='1.0.1.202006062100'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='21'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='3.15.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.compare' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.help.base' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.debug.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.debug' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.junit' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.objectweb.asm' range='7.0.0'/>
+        <required namespace='osgi.bundle' name='org.objectweb.asm.tree' range='7.0.0'/>
+        <required namespace='osgi.bundle' name='org.objectweb.asm.analysis' range='7.0.0'/>
+        <required namespace='osgi.bundle' name='org.objectweb.asm.commons' range='7.0.0'/>
+        <required namespace='osgi.bundle' name='org.objectweb.asm.util' range='7.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.filesystem' range='1.7.0'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            org.eclipse.jdt.bcoview
+          </description>
+        </requiredProperties>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.jdt.bcoview' version='1.0.1.202006062100'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.jdt.bcoview;singleton:=true&#xA;Bundle-Version: 1.0.1.202006062100
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='de.loskutov.anyedit.AnyEditTools' version='2.7.2.202006062100' generation='2'>
+      <update id='de.loskutov.anyedit.AnyEditTools' range='[0.0.0,2.7.2.202006062100)' severity='0'/>
+      <properties size='5'>
+        <property name='df_LT.Bundle-Name' value='AnyEdit Tools'/>
+        <property name='df_LT.Bundle-Vendor' value='Andrey Loskutov'/>
+        <property name='org.eclipse.equinox.p2.name' value='%Bundle-Name'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%Bundle-Vendor'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      </properties>
+      <provides size='19'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='de.loskutov.anyedit.AnyEditTools' version='2.7.2.202006062100'/>
+        <provided namespace='osgi.bundle' name='de.loskutov.anyedit.AnyEditTools' version='2.7.2.202006062100'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.actions' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.actions.compare' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.actions.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.actions.replace' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.actions.sort' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.compare' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.console' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.jdt' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.ui.editor' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.ui.preferences' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.ui.util' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.ui.wizards' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.util' version='0.0.0'/>
+        <provided namespace='osgi.identity' name='de.loskutov.anyedit.AnyEditTools' version='2.7.2.202006062100'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='20'>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.8.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.filesystem' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.forms' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.debug.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.expressions' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.compare' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.net' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.launching' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.junit' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.annotation' range='[1.1.0,1.2.0)' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench' range='3.8.0'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            de.loskutov.anyedit.AnyEditTools
+          </description>
+        </requiredProperties>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='de.loskutov.anyedit.AnyEditTools' version='2.7.2.202006062100'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: de.loskutov.anyedit.AnyEditTools;singleton:=true&#xA;Bundle-Version: 2.7.2.202006062100
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.jdt.bcoview.feature.feature.group' version='1.0.1.202006062100' singleton='false'>
+      <update id='org.eclipse.jdt.bcoview.feature.feature.group' range='[0.0.0,1.0.1.202006062100)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='Bytecode Outline'/>
+        <property name='org.eclipse.equinox.p2.description' value='Bytecode outline and bytecode comparison view for java/class files.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/bytecodeoutline/wiki'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.bcoview.feature.feature.group' version='1.0.1.202006062100'/>
+      </provides>
+      <requires size='15'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jface.text' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.compare' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.console' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.help.base' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.debug.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.debug' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.core' range='3.6.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.bcoview' range='[1.0.1.202006062100,1.0.1.202006062100]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.bcoview.feature.feature.jar' range='[1.0.1.202006062100,1.0.1.202006062100]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
+        </license>
+      </licenses>
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='FileSync.feature.jar' version='1.3.10.202006062100'>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='FileSync'/>
+        <property name='org.eclipse.equinox.p2.description' value='FileSync plugin for Eclipse is a file synchronisation tool. The&#xA;main goal is to keep files outside of Eclipse projects in-sync&#xA;with Eclipse project files.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/filesync4eclipse/wiki'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.update.feature.plugin' value='de.loskutov.FileSync'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='FileSync.feature.jar' version='1.3.10.202006062100'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='FileSync' version='1.3.10.202006062100'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='FileSync' version='1.3.10.202006062100'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
+        </license>
+      </licenses>
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='JDepend4Eclipse.feature.group' version='1.2.4.202006062100' singleton='false'>
+      <update id='JDepend4Eclipse.feature.group' range='[0.0.0,1.2.4.202006062100)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='JDepend4Eclipse'/>
+        <property name='org.eclipse.equinox.p2.description' value='JDepend4Eclipse plugin for Eclipse is a wrapper for running JDepend&#xA;from within Eclipse.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/jdepend4eclipse/wiki'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='JDepend4Eclipse.feature.group' version='1.2.4.202006062100'/>
+      </provides>
+      <requires size='12'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.runtime' range='3.6.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.core' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.swt' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jface' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.help' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.console' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='de.loskutov.eclipse.jdepend' range='[1.2.4.202006062100,1.2.4.202006062100]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='JDepend4Eclipse.feature.jar' range='[1.2.4.202006062100,1.2.4.202006062100]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
+        </license>
+      </licenses>
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='com.cr.lockness.Lockness.feature.feature.jar' version='3.1.1'>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='Lockness'/>
+        <property name='org.eclipse.equinox.p2.description' value='Lockness Eclipse Plugin - Java Thread Dump Analyser'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://lockness.plugin.free.fr/download.php'/>
+        <property name='org.eclipse.equinox.p2.provider' value='CR'/>
+        <property name='org.eclipse.update.feature.plugin' value='com.cr.lockness.Lockness'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.cr.lockness.Lockness.feature.feature.jar' version='3.1.1'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='com.cr.lockness.Lockness.feature' version='3.1.1'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='com.cr.lockness.Lockness.feature' version='3.1.1'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+          lockness.plugin@free.fr
+        </license>
+      </licenses>
+      <copyright>
+        CR, lockness.plugin@free.fr
+      </copyright>
+    </unit>
+    <unit id='org.eclipselabs.plugindependencies.ui' version='1.3.1.202206291936' generation='2'>
+      <update id='org.eclipselabs.plugindependencies.ui' range='[0.0.0,1.3.1.202206291936)' severity='0'/>
+      <properties size='4'>
+        <property name='df_LT.Bundle-Name' value='Plug-in Dependencies Explorer'/>
+        <property name='df_LT.Vendor' value='Andrey Loskutov'/>
+        <property name='org.eclipse.equinox.p2.name' value='%Bundle-Name'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%Vendor'/>
+      </properties>
+      <provides size='9'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.ui' version='1.3.1.202206291936'/>
+        <provided namespace='osgi.bundle' name='org.eclipselabs.plugindependencies.ui' version='1.3.1.202206291936'/>
+        <provided namespace='java.package' name='org.eclipselabs.plugindependencies.ui' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipselabs.plugindependencies.ui.adapter' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipselabs.plugindependencies.ui.console' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipselabs.plugindependencies.ui.view' version='0.0.0'/>
+        <provided namespace='osgi.identity' name='org.eclipselabs.plugindependencies.ui' version='1.3.1.202206291936'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='10'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='3.8.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.filesystem' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.pde.core' range='3.8.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.frameworkadmin' range='2.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipselabs.plugindependencies.core' range='1.0.5'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            org.eclipselabs.plugindependencies.ui
+          </description>
+        </requiredProperties>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipselabs.plugindependencies.ui' version='1.3.1.202206291936'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipselabs.plugindependencies.ui;singleton:=true&#xA;Bundle-Version: 1.3.1.202206291936
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>
