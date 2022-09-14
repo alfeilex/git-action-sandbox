@@ -8,5 +8,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: recursive
-      - uses: actions/hello-world-javascript-action@v1.1
-        if: ${{ grep -r "comadasd" }}
+      - name: set an output to test
+        id: Test1
+        run: echo "::set-output name=errors::$(grep -r "comadasd")"
+        if: ${{ steps.Test1.outputs.errors }}
+        
