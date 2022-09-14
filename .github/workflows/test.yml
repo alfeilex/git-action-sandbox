@@ -1,0 +1,12 @@
+name: CI Build Ubuntu
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: test 1
+        run: ${{ grep -r "comadasd" }}
