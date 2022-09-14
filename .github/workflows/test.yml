@@ -10,6 +10,6 @@ jobs:
           submodules: recursive
       - name: set an output to test
         id: Test1
-        run: echo "VARIABLE=$(grep -r 'com')" >> $GITHUB_ENV
+        run: echo "VARIABLE=$(grep -r "com" *)" >> $GITHUB_ENV
         if: ${{ env.VARIABLE == '' }}
         
