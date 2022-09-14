@@ -11,7 +11,7 @@ jobs:
       - name: set an output to test
         id: Test1
         run: |
-         VARIABLE=$(grep -r "com" test.txt)
+         VARIABLE=$(grep -r 'com' test.txt)
          echo "VAR=$VARIABLE" >> $GITHUB_ENV
         #if: ${{ env.VARIABLE == '' }}
       
