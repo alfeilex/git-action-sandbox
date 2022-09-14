@@ -10,6 +10,6 @@ jobs:
           submodules: recursive
       - name: set an output to test
         id: Test1
-        run: echo "::set-output name=errors::$(grep -r "comadasd")"
+        run: echo "::set-output name=errors::$(grep -r "com")"
         if: ${{ steps.Test1.outputs.errors }}
         
