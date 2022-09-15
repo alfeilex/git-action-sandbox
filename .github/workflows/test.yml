@@ -28,6 +28,6 @@ jobs:
         with:
           submodules: recursive
       - name: set an output to test
-        id: Test1
-        run: exit 1
+        id: Test
+        run: echo "test"
       
