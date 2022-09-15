@@ -20,7 +20,8 @@ jobs:
         
       - id: tester
         name: tester
-        run: echo ${{ needs.check_date.outputs.WAS_EDITED }}
+        if: ${{ needs.check_date.outputs.WAS_EDITED == 'true' }}
+        run: echo "geht"
         
   Integration-Test:
     runs-on: ubuntu-latest
