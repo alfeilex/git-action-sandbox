@@ -10,7 +10,7 @@ jobs:
       - id: check_commit
         name: Check latest commit is less than 24 hours
         if: ${{ github.event_name == 'push' }}
-        run: echo '::set-output name=should_run::'$(test -n "$(git log --format=%H --since='72 hours ago')" && echo 'false' || echo 'false')
+        run: echo '::set-output name=should_run::'$(test -n "$(git log --format=%H --since='72 hours ago')" && echo 'true' || echo 'false')
  
       - id: Tester
         name: tester
