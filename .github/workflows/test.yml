@@ -22,7 +22,7 @@ jobs:
         
       - id: tester
         name: tester
-        if: test -n "$(git log --format=%H --since='72 hours ago')
+        if: ${{ test -n "$(git log --format=%H --since='72 hours ago') }}
         #if: ${{ needs.check_date.outputs.WAS_EDITED == 'true' }}
         run: echo env.TEST
         
