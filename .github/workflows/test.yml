@@ -1,4 +1,4 @@
-name: CI Build Ubuntu
+name: Test
 on: push
 jobs:
   check_date:
@@ -19,4 +19,12 @@ jobs:
           export PID=$!
           sleep 2
           kill -1 $PID
-        
+  cancel:
+    runs-on: ubuntu-latest
+    name: Check latest commits
+    steps:
+      - uses: styfle/cancel-workflow-action@0.9.0
+        with:
+          workflow_id: Test
+          access_token: ${{ github.token }}
+
