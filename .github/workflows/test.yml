@@ -1,7 +1,5 @@
 name: CI Build Ubuntu
 on: push
-env:
-      TEST: $WAS_EDITED
 jobs:
   check_date:
     runs-on: ubuntu-latest
