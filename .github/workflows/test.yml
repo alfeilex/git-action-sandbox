@@ -27,6 +27,6 @@ jobs:
           -X DELETE \
           -H "Accept: application/vnd.github+json" \ 
           -H "Authorization: Bearer $GITHUB_TOKEN" \
-          https://api.github.com/repos/$OWNER/$REPO/actions/runs/$RUN_ID
+          "https://api.github.com/repos/$OWNER/$REPO/actions/runs/$RUN_ID"
 
 
