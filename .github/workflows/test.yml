@@ -15,12 +15,13 @@ jobs:
         continue-on-error: true
         name: check latest commit is less than a day
         if: ${{ github.event_name == 'push' }}
-        run: test -z $(git rev-list  --after="24 hours"  ${{ github.sha }}) && echo "::set-output name=should_run::false" && exit 1
+        #run: test -z $(git rev-list  --after="24 hours"  ${{ github.sha }}) && echo "::set-output name=should_run::false" && exit 1
+        run: echo '::set-output name=WAS_EDITED::'$(test -n "$(git log --format=%H --since='72 hours ago')" && echo 'true' || echo 'false')
         
   Integration-Test:
     runs-on: ubuntu-latest
     needs: check_date
-    if: ${{ needs.check_commit.outputs.should_run != 'false' }}
+    if: ${{ needs.check_date.outputs.should_run == 'true' }}
     steps:
       - name: test
         uses: actions/checkout@v3
