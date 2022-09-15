@@ -29,7 +29,9 @@ jobs:
           submodules: recursive
       - name: check latest commit
         id: Test
-        run: export TEST="test"
+        run: |
+          export TEST="test"
+          echo $TEST
       - name: output
         run: echo $TEST
       
