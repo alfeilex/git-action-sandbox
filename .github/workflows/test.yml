@@ -12,9 +12,19 @@ jobs:
         if: ${{ github.event_name == 'push' }}
         run: echo '::set-output name=should_run::'$(test -n "$(git log --format=%H --since='72 hours ago')" && echo 'true' || echo 'false')
  
-  cancel:
+  build:
+    needs: check_date
+    if: ${{ check_date.check_commit.outputs.should_run == 'true' }
     runs-on: ubuntu-latest
-    name: Check latest commits
+    steps:
+      - run: echo "yes"
+ 
+ 
+  cancel:
+    needs: check_date
+    if: ${{ check_date.check_commit.outputs.should_run == 'false' }}
+    runs-on: ubuntu-latest
+    name: Cancel the current workflow
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       OWNER: ${{ github.repository_owner }}
