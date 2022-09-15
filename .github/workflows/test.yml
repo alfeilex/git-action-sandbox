@@ -15,5 +15,5 @@ jobs:
       - id: Tester
         name: tester
         if: ${{ steps.check_commit.outputs.should_run == 'true' }}
-        run: echo "testerewewe"
+        run: SIGINT/Ctrl-C
         
