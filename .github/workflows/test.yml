@@ -15,5 +15,10 @@ jobs:
       - id: Tester
         name: tester
         if: ${{ steps.check_commit.outputs.should_run == 'true' }}
-        run: SIGINT/Ctrl-C
+        run: |
+          PID=$!
+          # Wait for 2 seconds
+          sleep 2
+          # Kill it
+          kill $PID
         
