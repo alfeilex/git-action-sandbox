@@ -6,38 +6,16 @@ jobs:
   check_date:
     runs-on: ubuntu-latest
     name: Check latest commit
-    outputs:
-      WAS_EDITED: ${{ steps.check_date.outputs.WAS_EDITED }}
     steps:
       - uses: actions/checkout@v2
-      - name: print latest_commit
-        run: echo ${{ github.sha }}
-
-      - id: check_date
-        #continue-on-error: true
-        name: check latest commit is less than a day
+      
+      - id: check_commit
+        name: Check latest commit is less than 24 hours
         if: ${{ github.event_name == 'push' }}
-        run: echo '::set-output name=should_run::'$(test -n "$(git log --format=%H --since='72 hours ago')" && echo 'true' || echo 'false')
+        run: echo '::set-output name=should_run::'$(test -n "$(git log --format=%H --since='72 hours ago')" && echo 'false' || echo 'false')
  
-      - id: test
+      - id: Tester
         name: tester
-        if: ${{ steps.check_date.outputs.should_run == 'true' }}
+        if: ${{ steps.check_commit.outputs.should_run == 'true' }}
         run: echo "testerewewe"
         
-  Integration-Test:
-    runs-on: ubuntu-latest
-    needs: check_date
-    if: ${{ needs.check_date.outputs.WAS_EDITED == 'true' }}
-    steps:
-      - name: test
-        uses: actions/checkout@v3
-        with:
-          submodules: recursive
-      - name: check latest commit
-        id: Test
-        run: |
-          env.TEST="test"
-          echo $TEST
-      - name: output
-        run: echo $TEST
-      
