@@ -22,7 +22,7 @@ jobs:
  
   cancel:
     needs: check_date
-    if: ${{ needs.check_date.outputs.should_run == 'false' }}
+    if: ${{ needs.check_commit.outputs.should_run == 'false' }}
     runs-on: ubuntu-latest
     name: Cancel the current workflow
     env:
