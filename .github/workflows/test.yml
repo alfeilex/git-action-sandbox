@@ -1,11 +1,11 @@
 name: CI Build Ubuntu
 on: push
+env:
+      TEST: $WAS_EDITED
 jobs:
   check_date:
     runs-on: ubuntu-latest
     name: Check latest commit
-    env:
-      TEST: $WAS_EDITED
     outputs:
       WAS_EDITED: ${{ steps.check_date.outputs.WAS_EDITED }}
     steps:
@@ -38,7 +38,7 @@ jobs:
       - name: check latest commit
         id: Test
         run: |
-          export TEST="test"
+          env.TEST="test"
           echo $TEST
       - name: output
         run: echo $TEST
