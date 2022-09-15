@@ -14,7 +14,7 @@ jobs:
  
   build:
     needs: check_date
-    if: ${{ needs.check_date.outputs.should_run == 'true' }}
+    if: ${{ needs.check_commit.outputs.should_run == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "yes"
