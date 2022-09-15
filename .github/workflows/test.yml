@@ -27,11 +27,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Check latest cossadasd
     steps:
-      - name: "Cancel the self CI workflow run"
+      - name: "Cancel the self workflow run"
         uses: potiuk/cancel-workflow-runs@master
         with:
           cancelMode: self
-          notifyPRCancel: true
-          notifyPRCancelMessage: Cancelled because image building failed.
           token: ${{ secrets.GITHUB_TOKEN }}
-          sourceRunId: ${{ github.event.workflow_run.id }}
+          notifyPRCancel: true
