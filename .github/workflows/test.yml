@@ -21,7 +21,8 @@ jobs:
  
       - id: test
         name: tester
-        run: echo ${{ steps.check_date.should_run }}
+        if: ${{ steps.check_date.should_run == 'true' }}
+        run: echo "testerewewe"
         
   Integration-Test:
     runs-on: ubuntu-latest
