@@ -7,14 +7,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - id: check_commit
+      - id: check_date
         name: Check latest commit is less than 24 hours
         if: ${{ github.event_name == 'push' }}
         run: echo '::set-output name=should_run::'$(test -n "$(git log --format=%H --since='72 hours ago')" && echo 'true' || echo 'false')
  
   build:
     needs: check_date
-    if: ${{ needs.check_commit.outputs.should_run == 'true' }}
+    if: ${{ needs.check_date.outputs.should_run == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "yes"
@@ -22,7 +22,7 @@ jobs:
  
   cancel:
     needs: check_date
-    if: ${{ needs.check_commit.outputs.should_run == 'false' }}
+    if: ${{ needs.check_date.outputs.should_run == 'false' }}
     runs-on: ubuntu-latest
     name: Cancel the current workflow
     env:
