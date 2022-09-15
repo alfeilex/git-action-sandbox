@@ -2,7 +2,7 @@ name: CI Build Ubuntu
 on: push
 jobs:
   check_commit:
-    uses: devonfw/ide/.github/workflows/check-commit.yml@master
+    uses: alfeilex.github.io/.github/workflows/check-commit.yml@master
   build:
     runs-on: ubuntu-latest
     needs: check_commit
