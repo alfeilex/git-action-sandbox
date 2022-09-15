@@ -22,7 +22,6 @@ jobs:
         
       - id: tester
         name: tester
-        if: ${{ env.TEST == 'true' }}
         run: echo env.TEST
         
   Integration-Test:
