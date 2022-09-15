@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Check latest commit
     outputs:
-      should_run: ${{ steps.should_run.outputs.should_run }}
+      WAS_EDITED: ${{ steps.should_run.outputs.should_run }}
     steps:
       - uses: actions/checkout@v2
       - name: print latest_commit
