@@ -21,7 +21,7 @@ jobs:
   Integration-Test:
     runs-on: ubuntu-latest
     needs: check_date
-    if: ${{ needs.check_date.outputs.should_run == 'true' }}
+    if: ${{ needs.check_date.outputs.WAS_EDITED == 'true' }}
     steps:
       - name: test
         uses: actions/checkout@v3
