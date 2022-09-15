@@ -23,7 +23,7 @@ jobs:
       - id: tester
         name: tester
         if: ${{ env.TEST == 'true' }}
-        run: echo "geht"
+        run: echo env.TEST
         
   Integration-Test:
     runs-on: ubuntu-latest
