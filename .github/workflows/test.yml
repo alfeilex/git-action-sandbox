@@ -15,7 +15,7 @@ jobs:
         continue-on-error: true
         name: check latest commit is less than a day
         if: ${{ github.event_name == 'push' }}
-        run: test -z $(git rev-list  --before="24 hours"  ${{ github.sha }}) && echo "::set-output name=should_run::false"
+        run: test -z $(git rev-list  --after="24 hours"  ${{ github.sha }}) && echo "::set-output name=should_run::false"
         
       - id: test
         if: ${{ check_date.outputs.should_run != 'false' }}
@@ -31,5 +31,5 @@ jobs:
           submodules: recursive
       - name: set an output to test
         id: Test1
-        run: echo "test"
+        run: exit 1
       
