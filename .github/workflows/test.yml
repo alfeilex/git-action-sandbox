@@ -16,20 +16,15 @@ jobs:
     runs-on: ubuntu-latest
     name: Check latest commits
     env:
-      GITHUB_CONTEXT: ${{ toJSON(github) }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      OWNER: ${{ github.repository_owner }}
+      REPO: ${{ github.event.repository.name }}
+      RUN_ID: ${{ github.event.workflow.id }}
     steps:
-      - uses: styfle/cancel-workflow-action@0.9.0
-        with:
-          workflow_id: ${{ github.event.workflow.id }}
-          access_token: ${{ github.token }}
-  
-  asdasd:
-    runs-on: ubuntu-latest
-    name: Check latest cossadasd
-    steps:
-      - name: "Cancel the self workflow run"
-        uses: potiuk/cancel-workflow-runs@master
-        with:
-          cancelMode: self
-          token: ${{ secrets.GITHUB_TOKEN }}
-          notifyPRCancel: true
+      - run: |
+          gh api \
+            --method DELETE \
+            -H "Accept: application/vnd.github+json" \
+            /repos/$OWNER/$REPO/actions/runs/$RUN_ID
+
+
