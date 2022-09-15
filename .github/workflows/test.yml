@@ -12,13 +12,6 @@ jobs:
         if: ${{ github.event_name == 'push' }}
         run: echo '::set-output name=should_run::'$(test -n "$(git log --format=%H --since='72 hours ago')" && echo 'true' || echo 'false')
  
-      - id: Tester
-        name: tester
-        if: ${{ steps.check_commit.outputs.should_run == 'true' }}
-        run: |
-          export PID=$!
-          sleep 2
-          kill -1 $PID
   cancel:
     runs-on: ubuntu-latest
     name: Check latest commits
