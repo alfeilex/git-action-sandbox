@@ -4,9 +4,11 @@ jobs:
   check_date:
     runs-on: ubuntu-latest
     name: Check latest commit
+    outputs:
+      should_run: ${{ steps.check_date.outputs.should_run }}
     steps:
       - uses: actions/checkout@v2
-      
+    
       - id: check_date
         name: Check latest commit is less than 24 hours
         if: ${{ github.event_name == 'push' }}
