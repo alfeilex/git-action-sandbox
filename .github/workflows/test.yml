@@ -22,4 +22,12 @@ jobs:
         with:
           workflow_id: ${{ github.event.workflow.id }}
           access_token: ${{ github.token }}
-
+  
+  asdasd:
+    runs-on: ubuntu-latest
+    name: Check latest cossadasd
+    steps:
+      - uses: actions/checkout@v2
+      
+      - id: test
+        run: echo "test"
