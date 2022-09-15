@@ -22,7 +22,7 @@ jobs:
       RUN_ID: ${{ github.run_id }}
     steps:
       - run: |
-          echo https://api.github.com/repos/$OWNER/$REPO/actions/runs/$RUN_ID
+          echo "https://api.github.com/repos/$OWNER/$REPO/actions/runs/$RUN_ID"
           curl \
           -X DELETE \
           -H "Accept: application/vnd.github+json" \ 
