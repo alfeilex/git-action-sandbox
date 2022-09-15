@@ -21,7 +21,7 @@ jobs:
  
       - id: test
         name: tester
-        if: ${{ steps.check_date.should_run == 'true' }}
+        if: ${{ steps.check_date.outputs.should_run == 'true' }}
         run: echo "testerewewe"
         
   Integration-Test:
