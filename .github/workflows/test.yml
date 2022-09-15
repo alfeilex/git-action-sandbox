@@ -17,9 +17,10 @@ jobs:
         #continue-on-error: true
         name: check latest commit is less than a day
         if: ${{ github.event_name == 'push' }}
-        run: test -z $(git rev-list  --after="24 hours"  ${{ github.sha }}) && echo "::set-output name=should_run::false"
+        run: echo '::set-output name=should_run::'$(test -n "$(git log --format=%H --since='72 hours ago')" && echo 'true' || echo 'false')
  
       - id: test
+        name: tester
         run: echo ${{ steps.check_date.should_run }}
         
   Integration-Test:
