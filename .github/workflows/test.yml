@@ -3,6 +3,7 @@ on: push
 jobs:
   check_commit:
     uses: alfeilex/git-action-sandbox/.github/workflows/commit-check.yml@master
+    
   build:
     runs-on: ubuntu-latest
     needs: check_commit
