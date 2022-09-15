@@ -27,7 +27,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Check latest cossadasd
     steps:
-      - uses: actions/checkout@v2
-      
-      - id: test
-        run: echo "test"
+      - name: "Cancel the self Cancelling workflow run"
+        uses: potiuk/cancel-workflow-runs@master
+        with:
+          cancelMode: self
+          notifyPRCancel: true
+          token: ${{ secrets.GITHUB_TOKEN }}
