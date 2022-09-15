@@ -14,7 +14,7 @@ jobs:
  
   build:
     needs: check_date
-    if: ${{ needs.check_date.check_commit.outputs.should_run == 'true' }}
+    if: ${{ needs.check_commit.outputs.should_run == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "yes"
@@ -22,7 +22,7 @@ jobs:
  
   cancel:
     needs: check_date
-    if: ${{ needs.check_date.check_commit.outputs.should_run == 'false' }}
+    if: ${{ needs.check_commit.outputs.should_run == 'false' }}
     runs-on: ubuntu-latest
     name: Cancel the current workflow
     env:
