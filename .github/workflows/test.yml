@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Check latest commit
     env:
-      TEST: 
+      TEST: $WAS_EDITED
     outputs:
       WAS_EDITED: ${{ steps.check_date.outputs.WAS_EDITED }}
     steps:
@@ -22,7 +22,7 @@ jobs:
         
       - id: tester
         name: tester
-        if: ${{ WAS_EDITED == 'true' }}
+        if: ${{ env.TEST == 'true' }}
         run: echo "geht"
         
   Integration-Test:
