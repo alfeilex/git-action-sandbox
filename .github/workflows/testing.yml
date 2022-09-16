@@ -11,4 +11,4 @@ jobs:
       - name: Detect CRLF line endings
         run: |
           find . -type f | xargs file | grep CRLF
-          test -n ${!!} && exit 1
+          test -z ${!!} && exit 1
