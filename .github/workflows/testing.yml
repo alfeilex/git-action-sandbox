@@ -9,5 +9,5 @@ jobs:
         with:
           submodules: recursive
       - name: Detect CRLF line endings
-        run: |
-          find . -type f | xargs file | grep CRLF
+        run: | 
+          find . -type f | xargs file | grep CRLF && exit 1
