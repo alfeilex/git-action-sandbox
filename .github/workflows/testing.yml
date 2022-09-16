@@ -9,7 +9,6 @@ jobs:
         with:
           submodules: recursive
       - name: Next test
-        continue-on-error: true
         run: exit 1
       - name: Detect CRLF line endings
         run: | 
