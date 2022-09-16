@@ -8,8 +8,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
-      - name: Next test
-        run: exit 1
       - name: Detect CRLF line endings
         run: | 
           find . -type f | xargs file | grep CRLF && exit 1 || exit 0
