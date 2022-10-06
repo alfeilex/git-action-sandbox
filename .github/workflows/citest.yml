@@ -3,8 +3,6 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-    outputs:
-      CHECK: ${{ steps.detect.outputs.CHECK }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
