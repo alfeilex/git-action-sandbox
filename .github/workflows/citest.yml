@@ -21,7 +21,7 @@ jobs:
       - name: Success
         if: ${{ steps.detect.outcome }} == 'success' && ${{ steps.check.outcome }} == 'success'
         run: |
-          echo ${{ build.outputs.CHECK }}
+          echo ${{ steps.detect.outputs.CHECK }}
           echo ${{ steps.check.outcome }}
           echo "Test succeeded!"; exit 0
       - name: Check on failures
