@@ -1,0 +1,2 @@
+
+image:https://github.com/alfeilex/git-action-sandbox/actions/workflows/canceler.yml/badge.svg["Windows",link="https://github.com/alfeilex/git-action-sandbox/actions/workflows/canceler.yml"]
