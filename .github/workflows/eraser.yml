@@ -1,15 +1,15 @@
-name: Cancel Eraser
+name: Delete cancelled workflow runs
 on: push
 
 jobs:
-  erase:
-    name: Delete canceled workflows 
+  del_runs:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      OWNER: ${{ github.repository_owner }}
-      REPO: ${{ github.event.repository.name }}
-      RUN_ID: ${{ github.run_id }}
-    steps: 
-      - run: |
-          curl -H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GITHUB_TOKEN" https://api.github.com/repos/$OWNER/$REPO/actions/runs
+    steps:
+      - name: Delete cancelled workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 0
+          keep_minimum_runs: 0
+          delete_run_by_conclusion_pattern: cancelled
