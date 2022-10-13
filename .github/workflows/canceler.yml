@@ -1,6 +1,7 @@
 name: Workflow Canceler
 on: push
-          
+
+jobs:
   cancel:
     name: Cancel this workflow 
     runs-on: ubuntu-latest
