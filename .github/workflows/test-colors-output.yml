@@ -4,6 +4,9 @@ on: push
 jobs:
   check_colors:
     runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
     steps:
       - name: checkout repo
         uses: actions/checkout@v3
