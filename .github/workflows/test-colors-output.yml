@@ -3,11 +3,10 @@ on: push
 
 jobs:
   check_colors:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: checkout repo
         uses: actions/checkout@v3
       - name: Run script
         run: |
-          chmod +x test
-          ./test
+          cmd 
