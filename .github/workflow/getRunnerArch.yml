@@ -1,0 +1,13 @@
+name: Get Runner Arch
+on: push
+
+jobs:
+  getArch:
+    name: Get Arch of every OS
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix: 
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+  steps:
+    run: echo $ {{ runner.arch }}
