@@ -8,6 +8,8 @@ jobs:
     strategy:
       matrix: 
         os: [ubuntu-latest, windows-latest, macos-latest]
-
-  steps:
-    run: echo $ {{ runner.arch }}
+      
+    steps:
+       - name: actions/checkout@v3
+         shell: bash
+         run: echo ${{ runner.arch }}
