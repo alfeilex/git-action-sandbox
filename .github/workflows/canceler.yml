@@ -11,3 +11,4 @@ jobs:
       - run: |
           sleep 3
           ./sleep.sh
+        shell: bash
