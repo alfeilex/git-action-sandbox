@@ -9,4 +9,5 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v3
       - run: |
+          sleep 3
           ./sleep.sh
